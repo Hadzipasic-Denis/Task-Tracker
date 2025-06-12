@@ -4,6 +4,7 @@ import ImportantTasks from "./components/ImportantTasks";
 import { ToastContainer, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Home from "./components/Home";
+import WeeklyTasks from "./components/WeeklyTasks";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/importantTasks" element={<ImportantTasks />} />
         <Route path="/toDo" element={<ToDo />} />
+        <Route path="/weeklyTasks" element={<WeeklyTasks />} />
       </Routes>
     </div>
   );
