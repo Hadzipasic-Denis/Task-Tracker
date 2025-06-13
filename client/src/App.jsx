@@ -2,9 +2,10 @@ import { Route, Routes } from "react-router-dom";
 import ToDo from "./components/ToDo";
 import ImportantTasks from "./components/ImportantTasks";
 import { ToastContainer, Bounce } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import Home from "./components/Home";
 import WeeklyTasks from "./components/WeeklyTasks";
+import ShoppingList from "./components/ShoppingList";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/importantTasks" element={<ImportantTasks />} />
         <Route path="/toDo" element={<ToDo />} />
         <Route path="/weeklyTasks" element={<WeeklyTasks />} />
+        <Route path="/shoppingList" element={<ShoppingList />} />
       </Routes>
     </div>
   );
