@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import WeeklyTasks from "./components/WeeklyTasks";
 import ShoppingList from "./components/ShoppingList";
 import "react-toastify/dist/ReactToastify.css";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
         theme="light"
         transition={Bounce}
       />
+
+      <Navbar />
 
       <Routes>
         <Route path="/" element={<Home />} />
