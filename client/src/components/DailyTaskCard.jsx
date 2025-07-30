@@ -18,6 +18,16 @@ const DailyTasksCard = ({ day }) => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedTasks));
   };
 
+  useEffect(() => {
+    const handleReset = () => {
+      const storedTasks = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+      setTasks(storedTasks);
+    };
+
+    window.addEventListener("tasksReset", handleReset);
+    return () => window.removeEventListener("tasksReset", handleReset);
+  }, [STORAGE_KEY]);
+
   const handleAddTask = () => {
     if (!inputValue.trim()) return;
     const newTask = {
